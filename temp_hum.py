@@ -1,5 +1,6 @@
 import AHT20
-import datetime, time
+import datetime
+import time
 
 # Initialize an AHT20
 aht20 = AHT20.AHT20()
@@ -17,7 +18,7 @@ while 1:
     # Print in the console
     print(data)
     print("data with crc check: {0}".format(data_crc8))
-    
+
     # Append in a file
     log = open("log.txt", "a")
     log.write(data + "\n")
